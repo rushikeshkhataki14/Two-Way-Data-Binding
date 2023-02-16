@@ -1,0 +1,10 @@
+<input [(ngModel)]="input" type="text" >
+<button (click)="add()" style="background-color: aqua; color: black;">Add name</button>
+
+<ul>
+  <li *ngFor="let f of friends,let i=index">{{i}}:{{f}} <button (click)="remove(i)" style="background-color: brown; color: black;">x</button></li>
+</ul>
+
+
+<div *ngIf="friends.length==0" style="color: red; font-size: large; box-shadow: 10px;"> make new friends randomly</div>
+<hr>
